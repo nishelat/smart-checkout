@@ -4,7 +4,7 @@ Smart Checkout is an ML-powered self-checkout system that helps businesses provi
 
 ![Screenshot](screenshot.jpg "Screenshot")
 ### Deployment Instructions
-Follow these instructions if you would like to deploy the application yourself. While this application takes input from your webcam, you can find sample input/output for Amazon Rekognition [here](https://us-west-1.console.aws.amazon.com/rekognition/home?region=us-west-1#/face-detection) (you might need to sign into the console to view the demo). You can also find sample input/output data for the propensity models [here](https://github.com/goprosper/prosper-sagemaker-basic/blob/master/using_prosper_model_package_basic.ipynb).
+Follow these instructions if you would like to deploy the application yourself.
 #### Setting up the propensity models using Amazon SageMaker
 This application uses three propensity models from AWS Marketplace: [Fashion Conscious](https://aws.amazon.com/marketplace/pp/prodview-snyxzel75fxms?ref_=ml_hackathon), [Use Uber Regularly](https://aws.amazon.com/marketplace/pp/prodview-ufv6gg5nmcsou?ref_=ml_hackathon), and [Play Team Sports](https://aws.amazon.com/marketplace/pp/prodview-vc3uv4uwxlf6e?ref_=ml_hackathon). After subscribing to them, set up an endpoint for each one. Note that the endpoints accept gender, age, and household income, formatted together as one comma-delimited string. Each returns the probability [0-1] that a given user is interested in fashion, Uber, or team sports, respectively.
 #### Exposing the endpoints using Amazon API Gateway
@@ -23,3 +23,7 @@ This is the system flow:
 5. Amazon API Gateway passes the data to the Amazon SageMaker models
 6. Amazon SageMaker returns the probabilities calculated by each model
 7. These values are used to determine which advertisement to display
+### Sample Input/Output Data
+While this application takes input from your webcam, you can find sample input/output for Amazon Rekognition [here](https://us-west-1.console.aws.amazon.com/rekognition/home?region=us-west-1#/face-detection) (you might need to sign into the console to view the demo). You can also find sample input/output data for the propensity models [here](https://github.com/goprosper/prosper-sagemaker-basic/blob/master/using_prosper_model_package_basic.ipynb).   
+
+Here is a quick sample input/output pair for the fashion propensity model. If we input gender = female, age = 18-24, and household income = $75,000-$79,999, the model will return a probability of 0.7214754223823547, i.e. there is an approximately 72% chance that this subject is fashion conscious.
