@@ -1,0 +1,111 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	background-color: #eeeeee;
+	cursor: default;
+}
+
+#video-container {
+	display: inline-block;
+	background-color: #5294ff;
+	width: 39vw;
+	height: 96vh;
+	border: 2vh #0f4396 solid;
+}
+
+#video-label {
+	position: absolute;
+	color: red;
+	left: 25px;
+	top: 25px;
+	font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	opacity: 0.3;
+}
+
+#video-element {
+	width: 39vw;
+	height: 375px;
+	background-color: #666666;
+	border-bottom: 2vh #0f4396 solid;
+}
+
+#monitor-message {
+	margin: auto;
+	width: 90%;
+	font-size: 35px;
+	text-align: center;
+	color: white;
+	margin-top: 30px;
+}
+
+#monitor-subtitle {
+	margin: auto;
+	width: 90%;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	margin-top: 15px;
+}
+
+#infos {
+	position: absolute;
+	top: 2%;
+	left: 46%;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	width: 50%;
+}
+
+#household-income-input {
+	margin-left: 15px;
+	text-align: right;
+	width: 70px;
+}
+
+#household-income-label {
+	font-size: 17px;
+	background-color: #333333;
+	padding: 10px;
+	margin: 10px;
+}
+
+.info {
+	font-size: 17px;
+	background-color: #333333;
+	padding: 10px;
+	margin: 10px;
+	display: none;
+}
+
+#intro-info {
+	color: #333333;
+	padding: 15px;
+	margin: 10px;
+}
+
+#ad-container {
+	display: none;
+	background-color: #0f4396;
+	font-size: 20px;
+	padding: 15px;
+}
+
+#run-button {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 10px;
+	background-color: #5294ff;
+	border: 5px #0f4396 solid;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#run-button:hover {
+	opacity: 0.7;
+}
